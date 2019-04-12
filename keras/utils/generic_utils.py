@@ -252,6 +252,7 @@ class Progbar(object):
             prev_total_width = self.total_width
             #sys.stdout.write('\b' * prev_total_width)
             sys.stdout.write('\r')
+            sys.stdout.flush()
 
             numdigits = int(np.floor(np.log10(self.target))) + 1
             barstr = '%%%dd/%%%dd [' % (numdigits, numdigits)
