@@ -249,8 +249,8 @@ class Progbar(object):
             if not force and (now - self.last_update) < self.interval:
                 return
 
-            prev_total_width = self.total_width
-            sys.stdout.write('\b' * prev_total_width)
+            #prev_total_width = self.total_width
+            #sys.stdout.write('\b' * prev_total_width)
             sys.stdout.write('\r')
 
             numdigits = int(np.floor(np.log10(self.target))) + 1
